@@ -1,0 +1,10 @@
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :administration, :plugin => :redmine_tracker_description %>
+<% end %>
+
+<%= render :file => "#{Rails.root}/app/views/trackers/_form.html.erb", :locals => {:f => f} %>
+
+<p id="tracker_description_box">
+<label><%= l("tracker_description.desc_label") %></label>
+<%= f.text_area :description %>
+</p>

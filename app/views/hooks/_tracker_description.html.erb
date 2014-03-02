@@ -1,0 +1,13 @@
+<%= content_for :header_tags do %>
+  <%= stylesheet_link_tag :tracker_description, :plugin => "redmine_tracker_description" %>
+<% end %>
+<%= javascript_include_tag :tracker_description, :plugin => :redmine_tracker_description %>
+
+<% if issue.tracker.description.present? %>
+  <div id="ticket_tracker_description">
+    <a><%= l("tracker_description.desc_label") %></a>
+    <div>
+      <%= simple_format(issue.tracker.description) %>
+    </div>
+  </div>
+<% end %>
