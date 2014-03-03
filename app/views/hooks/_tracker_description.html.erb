@@ -1,7 +1,7 @@
 <%= content_for :header_tags do %>
   <%= stylesheet_link_tag :tracker_description, :plugin => "redmine_tracker_description" %>
+  <%= javascript_include_tag :tracker_description, :plugin => :redmine_tracker_description %>
 <% end %>
-<%= javascript_include_tag :tracker_description, :plugin => :redmine_tracker_description %>
 
 <% if issue.tracker.description.present? %>
   <div id="ticket_tracker_description">
@@ -11,3 +11,7 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(function(){TrackerDescription.showDescription()});
+</script>
