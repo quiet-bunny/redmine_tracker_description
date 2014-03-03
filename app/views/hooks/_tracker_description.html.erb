@@ -6,8 +6,8 @@
 <% if issue.tracker.description.present? %>
   <div id="ticket_tracker_description">
     <a><%= l("tracker_description.desc_label") %></a>
-    <div>
-      <%= simple_format(issue.tracker.description) %>
+    <div class="wiki issue">
+      <%= textilizable(issue.tracker, :description) %>
     </div>
   </div>
 <% end %>

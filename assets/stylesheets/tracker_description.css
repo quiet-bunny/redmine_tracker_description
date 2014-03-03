@@ -1,3 +1,3 @@
-#ticket_tracker_description > div{display: none;}
-#ticket_tracker_description > div p{padding-left: 20px;}
+#ticket_tracker_description > div{display: none; padding: 10px 20px;}
+#ticket_tracker_description > div p{padding: 0px 20px;}
 #ticket_tracker_description > a{cursor: pointer;}
